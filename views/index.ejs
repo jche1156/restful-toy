@@ -16,6 +16,9 @@
                 <p id="comment-text">Comment: <%= item.comments%></p>
             </div>
         <% } %>
+        <div hx-post="/rest/hi" hx-swap="beforebegin">
+            Add new run?
+        </div>
     </div>
 </body>
 

@@ -1,0 +1,21 @@
+<div class="data-container">
+  <div class="location-date-container">
+    <h3 id="location-text"><%= item.location %></h1>
+    <p id="date-text"><%= formatDate(item.date) %></p>
+  </div>
+  <div class="distance-pace-container">
+    <p id="distance-text"><%= item.distance %> mi</h3>
+    <p id="pace-text"><%= item.pace %>/mi</p>
+  </div>
+  <p id="comment-text">Comment: <%= item.comments%></p>
+</div>
+
+
+<% 
+function formatDate(date) {
+    const formattedDate = new Date(date);
+    const options = { month: 'long', day: 'numeric', year: 'numeric' };
+    const formattedDateString = formattedDate.toLocaleString('en-US', options);
+    return formattedDateString;
+}
+%>
